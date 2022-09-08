@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./LandingPage.css"
+import { Link } from "react-router-dom";
 import BackgroundVideo from "./media/video-Landing-Page.mp4"
 
 export default function LandingPage() {
@@ -16,13 +16,13 @@ export default function LandingPage() {
             <h2>Press the button to view more</h2>
 
             <Link to="/home">
-               <a href="#">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <p>Get in</p>
-               </a>
+              <a href="/#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <p>Get in</p>
+              </a>
             </Link>
         </div>
     </div>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import { getVideogames, resetAll } from '../../actions'
 import Videogames from '../Videogames/Videogames'
-// import {Filter} from '../Filters/Filters'
+import {Filters} from '../Filters/Filters'
 import {Pagination} from '../Pagination/Pagination'
 
 const Home = () => {
@@ -26,7 +26,7 @@ const Home = () => {
 
 
   // Paginacion
-  function pagination(e, num) {
+   function pagination(e, num) {
     e.preventDefault();
     setPage(num);
   }
@@ -40,7 +40,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      {/* <Filter pagination={pagination} /> */}
+      <Filters pagination={pagination} /> 
       <Videogames videogames={currentPage} />
       <Pagination
         videogamesPerPage={videogamesPerPage}

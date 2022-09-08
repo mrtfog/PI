@@ -1,0 +1,158 @@
+
+body{
+    background-color: #191A19;
+}
+
+figure {
+    position: relative;
+    width: 450px;
+    height: 350px;
+    background-color: #000;
+    overflow: hidden;
+    margin: 20px;
+}
+
+figure figcaption::before {
+    content: "";
+    position: absolute;
+    inset: 20px;
+    opacity: 0;
+    scale: 1.25;
+    transition: opacity 0.25s, scale 0.25s;
+}
+
+figure:hover figcaption::before {
+    opacity: 1;
+    scale: 1;
+}
+
+figure img {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    object-fit: fill;
+    opacity: 0.85;
+    scale: 1.15;
+    width: 450px;
+    height: 350px;
+    transition: opacity 0.25s, scale 0.35s;
+}
+
+figure:hover img {
+    opacity: 0.5;
+    scale: 1;
+    filter: blur(2px);
+}
+
+figure figcaption {
+    position: absolute;
+    inset: 0;
+    padding: 50px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+    justify-content: center;
+}
+
+figure h2 {
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1);
+    opacity: 0;
+    translate: 25px;
+    transition: opacity 0.25s, translate 0.25s;        
+}
+
+figure:hover h2{
+    opacity: 1;
+    translate: 0;
+}
+
+figure p {
+    font-size: 25px;
+    opacity: 0;
+    translate: -25px;
+    transition: opacity 0.25s, translate 0.25s;
+    text-shadow: 0px 2px 3px rgba(0,0,0,0.4),
+                 0px 4px 13px rgba(0,0,0,0.1),
+                 0px 16px 23px rgba(0,0,0,0.1);
+}
+
+figure:hover p {
+    opacity: 1;
+    translate: 0;
+}
+
+
+
+figcaption button {
+    top: 80%;
+    left: 33%;
+  background: transparent;
+  backface-visibility: hidden;
+  border-radius: .375rem;
+  border-style: solid;
+  border-color: #fff;
+  border-width: .125rem;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.17rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+  line-height: 1.3;
+  padding: .875rem 1.125rem;
+  position: absolute;
+  text-align: left;
+  text-decoration: none;
+  transform: translateZ(0) scale(1);
+  transition: transform .25s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  opacity: 0;
+}
+
+figure:hover button{
+    opacity: 1;
+}
+
+button:not(:disabled):hover {
+  transform: scale(1.05);
+}
+
+button:not(:disabled):hover:active {
+  transform: scale(1.05) translateY(.125rem);
+}
+
+button:focus {
+  outline: 0 solid transparent;
+}
+
+button:focus:before {
+  content: "";
+  left: calc(-1*.375rem);
+  pointer-events: none;
+  position: absolute;
+  top: calc(-1*.375rem);
+  transition: border-radius;
+  user-select: none;
+}
+
+button:focus:not(:focus-visible) {
+  outline: 0 solid transparent;
+}
+
+button:focus:not(:focus-visible):before {
+  border-width: 0;
+}
+
+button:not(:disabled):active {
+  transform: translateY(.125rem);
+} 

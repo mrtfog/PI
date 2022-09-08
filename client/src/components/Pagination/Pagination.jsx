@@ -1,7 +1,9 @@
 import React from "react";
 import "./Pagination.css";
 
-export const Pagination = ({ videogamesPerPage, totalVideogames, paginate }) => {
+
+
+export const Pagination = ({ videogamesPerPage, totalVideogames, pagination }) => {
   const pageNumbers = [];
   const numOfPages = Math.ceil(totalVideogames / videogamesPerPage)
 
@@ -13,7 +15,7 @@ export const Pagination = ({ videogamesPerPage, totalVideogames, paginate }) => 
     <nav className="pagination">
         {pageNumbers.map((num) => (
           <div key={num} className="item">
-            <button onClick={(e) => paginate(e, num)}>
+            <button onClick={(e) => pagination(e, num)}>
               {num}
             </button>
           </div>
