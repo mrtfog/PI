@@ -11,7 +11,7 @@
     height: 100vh;
     position: absolute;
     z-index: -1;
-    /* filter: sepia(60%) */
+    filter: sepia(50%)
 }
 
 .interactive{
@@ -52,7 +52,7 @@ a{
     color: #fff;
     text-decoration: none;
     transition: 0.5s;
-    letter-spacing: 4px;
+    letter-spacing: 8px;
     overflow: hidden;
 }
 

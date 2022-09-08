@@ -14,8 +14,9 @@ export default function LandingPage() {
         <div className="interactive">
             <h1>Welcome to Videogames</h1>
             <h2>Press the button to view more</h2>
+
             <Link to="/home">
-               <a>
+               <a href="#">
                 <span></span>
                 <span></span>
                 <span></span>
