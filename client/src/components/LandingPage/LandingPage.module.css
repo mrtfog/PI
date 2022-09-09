@@ -11,8 +11,7 @@
     height: 100vh;
     position: absolute;
     z-index: -1;
-    filter: sepia(50%);
-    filter: blur(10px);
+    filter: blur(5px);
 }
 
 .interactive{
@@ -48,7 +47,7 @@
 
 /* BOTON */
 
- a{
+.btnlanding a{
     position: relative;
     display: inline-block;
     color: #fff;
@@ -58,13 +57,13 @@
     overflow: hidden;
 }
 
-a p{
+.btnlanding p{
     font-size: 25px;
     font-weight: 300;
     padding: 30px;
 }
 
-a:hover{
+.btnlanding:hover a{
     background: #fff;
     color: #000;
     box-shadow: 0 0 5px #fff,
@@ -74,17 +73,17 @@ a:hover{
     -webkit-box-reflect: belox 1px
     linear-gradient(transparent, #0005);
 }
-a:nth-child(1){
+.btnlanding:nth-child(1){
     filter: hue-rotate(270deg);
 }
-a:nth-child(2){
+.btnlanding:nth-child(2){
     filter: hue-rotate(110deg);
 }
-a span{
+.btnlanding span{
     position: absolute;
     display: block;
 }
-a span:nth-child(1){
+.btnlanding span:nth-child(1){
     top: 0;
     left: 0;
     width: 100%;
@@ -102,7 +101,7 @@ a span:nth-child(1){
     }
 }
 
-a span:nth-child(2){
+.btnlanding span:nth-child(2){
     top: -100%;
     right: 0;
     width: 2px;
@@ -121,7 +120,7 @@ a span:nth-child(2){
     }
 }
 
-a span:nth-child(3){
+.btnlanding span:nth-child(3){
     bottom: 0;
     right: 0;
     width: 100%;
@@ -140,7 +139,7 @@ a span:nth-child(3){
     }
 }
 
-a span:nth-child(4){
+.btnlanding span:nth-child(4){
     bottom: -100%;
     left: 0;
     width: 2px;

@@ -91,7 +91,7 @@ figure:hover p {
 
 
 
-figcaption button {
+figcaption .button {
     top: 80%;
     left: 33%;
   background: transparent;
@@ -119,23 +119,23 @@ figcaption button {
   opacity: 0;
 }
 
-figure:hover button{
+figure:hover .button{
     opacity: 1;
 }
 
-button:not(:disabled):hover {
+.button:not(:disabled):hover {
   transform: scale(1.05);
 }
 
-button:not(:disabled):hover:active {
+.button:not(:disabled):hover:active {
   transform: scale(1.05) translateY(.125rem);
 }
 
-button:focus {
+.button:focus {
   outline: 0 solid transparent;
 }
 
-button:focus:before {
+.button:focus:before {
   content: "";
   left: calc(-1*.375rem);
   pointer-events: none;
@@ -145,14 +145,14 @@ button:focus:before {
   user-select: none;
 }
 
-button:focus:not(:focus-visible) {
+.button:focus:not(:focus-visible) {
   outline: 0 solid transparent;
 }
 
-button:focus:not(:focus-visible):before {
+.button:focus:not(:focus-visible):before {
   border-width: 0;
 }
 
-button:not(:disabled):active {
+.button:not(:disabled):active {
   transform: translateY(.125rem);
 } 

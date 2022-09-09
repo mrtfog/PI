@@ -1,8 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { Link } from "react-router-dom";
 import './NavBar.css'
 import Henry from './favicon.ico'
 
 const NavBar = () => {
+
+  const [name, setName] = useState("");
+
+  function handleSubmit(e) {
+      e.preventDefault();
+      setName("");
+  }
+
   return (
     <div className='navbar'>
 
@@ -13,12 +22,16 @@ const NavBar = () => {
         </div>
         
         <div className='searchbar'>
-          <input type="text" placeholder='Search a game'/>
-          <button>Search</button>
+          <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Search a videogame" type="text"/>
+          <Link to={`/results/${name}`}>
+            <button>Search</button>
+          </Link>
         </div>
 
         <div className='create-game'>
-        <button><p>Create Game</p></button>
+        <Link to='/create'>
+          <button><p>Create Game</p></button>
+        </Link>
         </div>
         
     </div>
