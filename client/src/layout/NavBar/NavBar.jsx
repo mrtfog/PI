@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import { Link } from "react-router-dom";
 import './NavBar.css'
-import Henry from './favicon.ico'
 
 const NavBar = () => {
 
@@ -13,29 +12,30 @@ const NavBar = () => {
   }
 
   return (
-    <div className='navbar'>
-
-
+    <div className='navbarGlow'>
+      <div className='navbar'>
         <div className='title'>
-          <img src={Henry} alt="" />
           <h1>Henry Videogames</h1>
         </div>
-        
-        <div className='searchbar'>
-          <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Search a videogame" type="text"/>
-          <Link to={`/results/${name}`}>
-            <button>Search</button>
-          </Link>
+
+        <div class="search-container">
+          <form method="get" onSubmit={(e) => handleSubmit(e)}>
+            <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Search a videogame" className="search expandright" id="searchright" name="q" type="text"/>
+              <Link to={`/results/${name}`}>
+                <label className="button searchbutton" for="searchright"><span class="mglass">&#9906;</span></label>
+              </Link>
+          </form>
         </div>
 
         <div className='create-game'>
         <Link to='/create'>
-          <button><p>Create Game</p></button>
+          <button>Create Game</button>
         </Link>
         </div>
-        
+      </div>
     </div>
   )
 }
 
 export default NavBar
+

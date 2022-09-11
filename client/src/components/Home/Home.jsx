@@ -4,6 +4,7 @@ import { getVideogames, resetAll } from '../../actions'
 import Videogames from '../Videogames/Videogames'
 import {Filters} from '../Filters/Filters'
 import {Pagination} from '../Pagination/Pagination'
+import NavBar from '../../layout/NavBar/NavBar'
 
 const Home = () => {
   const dispatch = useDispatch()
@@ -40,6 +41,7 @@ const Home = () => {
 
   return (
     <div className="home">
+      <NavBar />
       <Filters pagination={pagination} /> 
       <Videogames videogames={currentPage} />
       <Pagination

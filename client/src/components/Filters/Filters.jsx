@@ -9,7 +9,7 @@ export function Filters({pagination}) {
 
   useEffect(() => {
     dispatch(getGenres());
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []); 
 
 
   // Filtrado por genre
@@ -43,36 +43,48 @@ export function Filters({pagination}) {
   };
 
   return (
-    <div className="filter">
-      <div>
-        <div>Filter by Genre</div>
-        <select onChange={(e) => handleFilter(e)}>
-          <option default>All</option>
-          {genres.map((G) => (
-            <option value={G.name}>{G.name}</option>
-          ))}
-        </select>
+    <div className="container">
+      <div className="filters">
+         <div className="genre-filter">
+          <h3>Filter by Genre</h3>
+          <select onChange={(e) => handleFilter(e)}>
+            <option defaultValue="All" >All</option>
+            {genres.map((G) => (
+              <option value={G.name}>{G.name}</option>
+            ))}
+          </select>
+        </div>
+
+
+        <div className="order-filter">
+          <h3>Order</h3>
+          <select onChange={(e) => handleOrder(e)}>
+            <option value="All" default>All</option>
+            <option value="asc_name">Alphabetically (A-Z)</option>
+            <option value="desc_name">Alphabetically (Z-A)</option>
+            <option value="asc_rating">Rating (Lower-Higher)</option>
+            <option value="desc_rating">Rating (Higher-Lower)</option>
+          </select>
+        </div>
+
+      
+        <div className="creator-filter">
+          <h3>Filter by Creator</h3>
+          <select onChange={(e) => handleCreator(e)} >
+            <option default>All</option>
+            <option value="Api">Api videogames</option>
+            <option value="Created">User videogames</option>
+          </select>
+        </div>
+
+
+      </div> 
       </div>
-      <div>
-        <div>Order</div>
-        <select onChange={(e) => handleOrder(e)}>
-          <option value="All" default>All</option>
-          <option value="asc_name">Alphabetically (A-Z)</option>
-          <option value="desc_name">Alphabetically (Z-A)</option>
-          <option value="asc_rating">Rating (Lower-Higher)</option>
-          <option value="desc_rating">Rating (Higher-Lower)</option>
-        </select>
-      </div>
-      <div>
-        <div>Filter by Creator</div>
-        <select onChange={(e) => handleCreator(e)} >
-          <option default>All</option>
-          <option value="Api">Api videogames</option>
-          <option value="Created">User videogames</option>
-        </select>
-      </div>
-    </div>
+ 
   );
 }
 
 export default Filters;
+
+
+        

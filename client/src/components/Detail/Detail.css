@@ -1,0 +1,24 @@
+.full {
+    width: 85%;
+    margin: auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+/* .info {
+
+} */
+
+.image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img{
+    height: 480px;
+    width: 640px;
+}

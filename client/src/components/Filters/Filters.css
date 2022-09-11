@@ -1,0 +1,12 @@
+.container{
+    width: 50%;
+    margin: auto;
+    padding: 50px;
+    color: #fff;
+    text-align: center;
+}
+
+.filters{
+    display: flex;
+    justify-content: space-around;
+}

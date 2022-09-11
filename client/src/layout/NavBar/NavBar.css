@@ -1,49 +1,180 @@
 .navbar {
     width: 100%;
     height: 90px;
-    background-color: #141414;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5),
-                 0px 4px 13px rgba(0, 0, 0, 0.5),
-                 0px 8px 23px rgba(0, 0, 0, 0.3);
+    background-color: #000000;
     color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    z-index: 1;
+
 }
 
-.title{
-    display: flex;
-    padding-left: 20px;
+.navbarGlow{
+  height: 100%;
+  width: 100%;
+  box-shadow:  0 0 0 1px rgba(0, 0, 0, .01);
+ 
+  
 }
 
-.title h1{
-    padding-left: 10px;
+.navbarGlow::after{
+position: absolute;
+content: "";
+margin-top: -2.5%;
+z-index: -1;
+height: 5.7%;
+width: 100%;
+transform: scale(1) translateZ(0);
+filter: blur(5px);
+background: linear-gradient(to left,
+#FF5770,
+#E4428D,
+#C42DA8,
+#9E16C3,
+#6501DE,
+#9E16C3,
+#C42DA8,
+#E4428D,
+#FF5770);
+background-size: 200% 100%;
+animation: animateGlow 2s ease-in-out infinite; 
 }
 
-.title img{
+@keyframes animateGlow{
+  0%{
+    background-position: 0% 50%;
+  }
+  100%{
+    background-position: 200% 50%;
+  }
+}
+
+  .button {
+    display: inline-block;
+    margin: 4px 2px;
+    background-color: transparent;
+    border-color: #FF5770;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    font-size: 14px;
     height: 50px;
-}
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 
-.searchbar input[type=text] {
-    width: 130px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
   }
   
-.searchbar button{
-    transform: rotateX(-120px)
+  .button:hover {
+    transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+    border-style: none;
+  }
+  
+  .search-container {
+    position: relative;
+    display: inline-block;
+    margin: 4px 2px;
+    height: 50px;
+    width: 50px;
+    vertical-align: bottom;
+  }
+  
+  .mglass {
+    display: inline-block;
+    pointer-events: none;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+  }
+  
+  .searchbutton {
+    position: absolute;
+    font-size: 22px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .search:hover + .searchbutton {
+    transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+  }
+  
+  .search {
+    position: absolute;
+    left: 49px; 
+    background-color: white;
+    outline: none;
+    border: none;
+    padding: 0;
+    width: 0;
+    height: 100%;
+    z-index: 10;
+    transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    border-radius: 5px;
+  }
+  
+  .search:hover {
+    width: 200px; 
+    padding: 0 16px 0 0;
+  }
+  
+  .expandright {
+    left: auto;
+    right: 49px; 
+  }
+  
+  .expandright:hover {
+    padding: 0 0 0 16px;
+  }
+
+.create-game button{
+  cursor: pointer;
+  color: white;
+  display: inline-block;
+  justify-content: center;
+  padding: 10px;
+  margin: 4px 2px;
+  background-color: transparent;
+  border-color: #FF5770;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  font-size: 14px;
+  height: 50px;
+  font-weight: 500;
+  transition: .25s ease-in-out;
 }
 
-  /* When the input field gets focus, change its width to 100% */
-  .searchbar input[type=text]:hover {
-    width: 300px;
-  }
+.create-game:hover button{
+  color: #FFF;
+  background-color: #FF5770;
+  border-color: transparent;
+  border-radius: 5px;
+  font-size: 14px;
+  height: 50px;
+}
 
-  .create-game{
-    padding-right: 20px;
-  }
-
-
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 

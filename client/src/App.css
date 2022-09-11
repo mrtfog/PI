@@ -17,3 +17,44 @@
 ::-webkit-scrollbar-track{
   background-color: #151515;
 }
+
+p::selection {
+  color: #fff;
+  background: #FF5770 ;
+}
+
+h1::selection {
+  color: #fff;
+  background: #FF5770 ;
+}
+
+h2::selection {
+  color: #fff;
+  background: #FF5770 ;
+}
+h3::selection {
+  color: #fff;
+  background: #FF5770 ;
+}
+
+h5::selection {
+  color: #fff;
+  background: #FF5770 ;
+}
+
+button::selection{
+  user-select: none;
+}
+
+select::selection{
+  user-select: none;
+}
+
+img::selection{
+  user-select: none;
+}
+
+input::selection{
+  user-select: none;
+}
+
