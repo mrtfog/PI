@@ -55,6 +55,7 @@ img::selection{
 }
 
 input::selection{
-  user-select: none;
+  color: #fff;
+  background: #FF5770 ;
 }
 

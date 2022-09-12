@@ -3,9 +3,14 @@
     height: 90px;
     background-color: #000000;
     color: #fff;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
+
+
+/* GLOWING EFFECT START*/
 .navbarGlow{
   height: 100%;
   width: 100%;
@@ -45,109 +50,10 @@ animation: animateGlow 2s ease-in-out infinite;
     background-position: 200% 50%;
   }
 }
+/* GLOWING EFFECT END*/
 
-  .button {
-    display: inline-block;
-    margin: 4px 2px;
-    background-color: transparent;
-    border-color: #FF5770;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 5px;
-    font-size: 14px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-
-  }
-  
-  .button:hover {
-    transition-duration: 0.4s;
-    -moz-transition-duration: 0.4s;
-    -webkit-transition-duration: 0.4s;
-    -o-transition-duration: 0.4s;
-    background-color: white;
-    color: black;
-    border-style: none;
-  }
-  
-  .search-container {
-    position: relative;
-    display: inline-block;
-    margin: 4px 2px;
-    height: 50px;
-    width: 50px;
-    vertical-align: bottom;
-  }
-  
-  .mglass {
-    display: inline-block;
-    pointer-events: none;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-  }
-  
-  .searchbutton {
-    position: absolute;
-    font-size: 22px;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .search:hover + .searchbutton {
-    transition-duration: 0.4s;
-    -moz-transition-duration: 0.4s;
-    -webkit-transition-duration: 0.4s;
-    -o-transition-duration: 0.4s;
-    background-color: white;
-    color: black;
-  }
-  
-  .search {
-    position: absolute;
-    left: 49px; 
-    background-color: white;
-    outline: none;
-    border: none;
-    padding: 0;
-    width: 0;
-    height: 100%;
-    z-index: 10;
-    transition-duration: 0.4s;
-    -moz-transition-duration: 0.4s;
-    -webkit-transition-duration: 0.4s;
-    -o-transition-duration: 0.4s;
-    border-radius: 5px;
-  }
-  
-  .search:hover {
-    width: 200px; 
-    padding: 0 16px 0 0;
-  }
-  
-  .expandright {
-    left: auto;
-    right: 49px; 
-  }
-  
-  .expandright:hover {
-    padding: 0 0 0 16px;
-  }
-
-
-
-  .btn-createGame{
+/* CREATE GAME BUTTON START*/
+.btn-createGame{
   cursor: pointer;
   color: white;
   display: inline-block;
@@ -173,10 +79,109 @@ animation: animateGlow 2s ease-in-out infinite;
   font-size: 14px;
   height: 50px;
 }
+/* CREATE GAME BUTTON END*/
 
-.navbar{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
 
+/* SEARCH BAR START*/
+  .button1 {
+    display: inline-block;
+    margin: 4px 2px;
+    background-color: transparent;
+    border-color: #FF5770;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+  }
+  
+  .button1:hover {
+    transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    background-color: #FF5770;
+    color: #fff;
+    border-width: 1px;
+    border-style: solid;
+  }
+  
+  .search-container {
+    position: relative;
+    display: inline-block;
+    margin: 4px 2px;
+    height: 50px;
+    width: 50px;
+    vertical-align: bottom;
+  }
+  
+  .mglass {
+    display: inline-block;
+    pointer-events: none;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+  }
+  
+  .searchbutton1 {
+    position: absolute;
+    font-size: 22px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .search1:hover + .searchbutton1 {
+    transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+  }
+  
+  .search1 {
+    position: absolute;
+    left: 49px; 
+    background-color: white;
+    outline: none;
+    border: none;
+    padding: 0;
+    width: 0;
+    height: 100%;
+    z-index: 10;
+    transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    border-radius: 5px;
+  }
+  
+  .search1:hover {
+    width: 250px; 
+    padding: 0 0 0 16px;
+  }
+  
+  .expandright1 {
+    left: auto;
+    right: 49px; 
+    
+  }
+  
+  .expandright1:focus{
+    width: 250px; 
+    padding: 0 0 0 16px ;
+  }  
+/* SEARCH BAR END*/

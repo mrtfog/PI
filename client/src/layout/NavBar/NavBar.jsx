@@ -18,11 +18,11 @@ const NavBar = () => {
           <h1>Henry Videogames</h1>
         </div>
 
-        <div class="search-container">
+        <div className="search-container">
           <form method="get" onSubmit={(e) => handleSubmit(e)}>
-            <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Search a videogame" className="search expandright" id="searchright" name="q" type="text"/>
+            <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Search a videogame" className="search1 expandright1" id="searchright" name="q" type="text" autoComplete="off"/>
               <Link to={`/results/${name}`}>
-                <label className="button searchbutton" for="searchright"><span class="mglass">&#9906;</span></label>
+                <label className="button1 searchbutton1" htmlFor="searchright"><span className="mglass">&#9906;</span></label>
               </Link>
           </form>
         </div>
