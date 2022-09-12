@@ -7,8 +7,8 @@ export default function Videogames ({videogames}) {
   return (
     <div className="show">
       
-      {videogames.length > 0 ?
-      videogames.map((data) => (<Card data={data} />))
+      {videogames.length > 0  || videogames.length < 14 ?
+      videogames.map((data) => (<Card data={data} id=""/>))
       : <Loader />
       } 
     </div>

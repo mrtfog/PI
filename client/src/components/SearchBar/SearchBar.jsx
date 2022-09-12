@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { searchVideogames } from "../../actions/index";
 import Videogames from "../../components/Videogames/Videogames";
-import { Pagination } from "../../components/Pagination/Pagination";
+import { Pagination } from "../Pagination/Pagination";
 import "./SearchBar.css";
 import Loader from "../../layout/Loader/Loader";
 
@@ -12,20 +12,20 @@ export default function SearchBar() {
   let { name } = useParams()
 
   const searchVideogame = useSelector((state) => state.searchVideogameByName);
-  console.log(searchVideogame)
+
 
   useEffect(() => {
     dispatch(searchVideogames(name));
   }, [name]); 
 
   // Paginacion
-  function paginate(e, num) {
+  function pagination(e, num) {
     e.preventDefault();
     setPage(num);
   }
 
   const [page, setPage] = useState(1);
-  const [videogamesPerPage] = useState(15);
+  const [videogamesPerPage] = useState(10);
 
   let lastCardPerPage = page * videogamesPerPage;
   let firtsCardPerPage = lastCardPerPage - videogamesPerPage;
@@ -40,7 +40,7 @@ export default function SearchBar() {
           <Pagination
             videogamesPerPage={videogamesPerPage}
             totalVideogames={searchVideogame.length}
-            paginate={paginate}
+            pagination={pagination}
           />
         </>
         : <Loader/> 
