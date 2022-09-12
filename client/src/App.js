@@ -3,6 +3,9 @@ import LandingPage from "./components/LandingPage/LandingPage.jsx"
 import Home from './components/Home/Home';
 import { Route } from "react-router-dom";
 import Detail from './components/Detail/Detail';
+import SearchBar from './components/SearchBar/SearchBar';
+import NavBar from './layout/NavBar/NavBar';
+import CreateVideogame from './components/CreateVideogame/CreateVideogame';
 
 function App() {
   return (
@@ -16,11 +19,13 @@ function App() {
           render={({ match }) => < Detail id={match.params.id} />}
         />
 
-        {/* <Route path="/results" component={NavBar} />
+        <Route path="/results" component={NavBar} />
         <Route
           exact path="/results/:name"
-          component={Search} 
-        /> */}
+          component={SearchBar} 
+        /> 
+
+        <Route path="/create" exact component={CreateVideogame} />
     </div>
   );
 }

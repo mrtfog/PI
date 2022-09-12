@@ -5,8 +5,8 @@
 }
 
 ::-webkit-scrollbar {
-  width: 15px;
-  height: 20px;
+  width: 12px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-thumb {

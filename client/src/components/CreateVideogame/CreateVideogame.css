@@ -1,29 +1,4 @@
-.full {
-    width: 85%;
-    margin: auto;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-}
-
-/* .info {
-
-} */
-
-.image{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.image img{
-    height: 480px;
-    width: 640px;
-}
-
-.btn-backToHome{
+.btn-createGame{
     cursor: pointer;
     color: white;
     display: inline-block;
@@ -41,7 +16,7 @@
     transition: .25s ease-in-out;
   }
   
-  .btn-backToHome:hover{
+  .btn-createGame:hover{
     color: #FFF;
     background-color: #FF5770;
     border-color: transparent;

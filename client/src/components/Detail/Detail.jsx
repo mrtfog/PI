@@ -46,7 +46,7 @@ function Detail({ id }) {
 
       </div>
       <Link to="/home">
-          <button className="button" type="submit">Back to home</button>
+          <button className="btn-backToHome"type="submit">Back to home</button>
       </Link>
     </div>    
   );

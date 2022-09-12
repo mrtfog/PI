@@ -27,9 +27,9 @@ const NavBar = () => {
           </form>
         </div>
 
-        <div className='create-game'>
+        <div>
         <Link to='/create'>
-          <button>Create Game</button>
+          <button className='btn-createGame'>Create Game</button>
         </Link>
         </div>
       </div>
