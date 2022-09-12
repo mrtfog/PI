@@ -8,15 +8,21 @@
     justify-content: space-around;
 }
 
+.title a{
+  text-decoration: none;
+}
 
+.title h1{
+  color: #fff;
+  font-size: 30px;
+  transition: .5s ;
+}
 
 /* GLOWING EFFECT START*/
 .navbarGlow{
   height: 100%;
   width: 100%;
   box-shadow:  0 0 0 1px rgba(0, 0, 0, .01);
- 
-  
 }
 
 .navbarGlow::after{

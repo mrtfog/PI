@@ -15,7 +15,9 @@ const NavBar = () => {
     <div className='navbarGlow'>
       <div className='navbar'>
         <div className='title'>
-          <h1>Henry Videogames</h1>
+          <Link to={`/home`}>
+            <h1>Henry Videogames</h1>
+          </Link>
         </div>
 
         <div className="search-container">
