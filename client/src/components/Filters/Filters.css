@@ -29,10 +29,10 @@
 .filters select{
     text-align: center;
 	display: inline-block;
-	width: 100%;
+	width: 200px;
 	cursor: pointer;
   	padding: 7px 10px;
-  	height: 30px;
+  	height: 35px;
   	outline: 0; 
 	background: #f0f0f0;
 	color: #000000;

@@ -61,10 +61,10 @@ export function Filters({pagination}) {
           <h3>Order</h3>
           <select onChange={(e) => handleOrder(e)}>
             <option value="All" default>All</option>
-            <option value="asc_name">Alphabetically (A-Z)</option>
-            <option value="desc_name">Alphabetically (Z-A)</option>
-            <option value="asc_rating">Rating (Lower-Higher)</option>
-            <option value="desc_rating">Rating (Higher-Lower)</option>
+            <option value="asc_name">ABC &#8595;</option>
+            <option value="desc_name">ABC &#8593;</option>
+            <option value="asc_rating">Rating &#8595;</option>
+            <option value="desc_rating">Rating &#8593;</option>
           </select>
         </div>
 
@@ -73,8 +73,8 @@ export function Filters({pagination}) {
           <h3>Filter by Creator</h3>
           <select onChange={(e) => handleCreator(e)} >
             <option default>All</option>
-            <option value="Api">Api videogames</option>
-            <option value="Created">User videogames</option>
+            <option value="Api">RAWG Videogames</option>
+            <option value="Created">DB Videogames</option>
           </select>
         </div>
 
