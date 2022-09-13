@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { createVideogame, getGenres } from "../../actions/index";
 import "./CreateVideogame.css";
+import { Link } from 'react-router-dom'
 
 const CreateVideogame = () => {
     const dispatch = useDispatch();
@@ -21,7 +22,7 @@ const CreateVideogame = () => {
 
     useEffect(() => {
         dispatch(getGenres());
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    }, []); 
 
     const randomPlatforms = ["PC", "iOS", "Android", "macOS",  "PlayStation 4", "PlayStation 5", "Xbox", "PS Vita"]
 
@@ -57,17 +58,17 @@ const CreateVideogame = () => {
 
         // Validaciones
         if (!obj.name) {
-            alert("Hey! Don't forget the name.")
+            alert("You should type a name.")
             return
         }
         if (!obj.description) {
-            alert("Hey! Don't forget the description.")
+            alert("You should type a description.")
             return
         }if (!obj.released) {
-            alert("Hey! Don't forget the date.")
+            alert("You should type a date.")
             return
         }if (obj.rating > 5 || obj.rating < 0) {
-            alert("Hey! The rating should be between 0 and 5.")
+            alert("You should selecta rating between 0 and 5.")
             return
         }
 
@@ -75,7 +76,6 @@ const CreateVideogame = () => {
         dispatch(createVideogame(obj));
         e.target.reset();
         alert("Videogame created successfully!");
-        /* dispatch(getVideogames()) */
 
         setGame({
             name: "",
@@ -101,56 +101,61 @@ return (
             <div>
             <div>
                 <div className="divTitles">
+                        <h3 className="titles">Name</h3>
                     <div>
-                        <label>-Name-</label>
                         <input
-                        className="label"
+                        className="info-createGame"
                         type="text"
                         name="name"
                         value={game.name}
+                        autoComplete="off"
                         ></input>
                     </div>
+                        <h3 className="titles">Description</h3>
                     <div>
-                        <label>-Description-</label>
                         <input
-                        className="label"
+                        className="info-description"
                         type="text"
                         name="description"
                         value={game.description}
+                        autoComplete="off"
                         ></input>
                     </div>
+                        <h3 className="titles">Released</h3>
                     <div>
-                        <label>-Released-</label>
                         <input
-                        className="label"
+                        className="info-createGame"
                         type="date"
                         name="released"
                         value={game.released}
+                        autoComplete="off"
                         ></input>
                     </div>
+                        <h3 className="titles">Rating</h3>
                     <div>
-                        <label>-Rating-</label>
                         <input
-                        className="label"
+                        className="info-createGame"
                         type="number"
                         name="rating"
                         value={game.rating}
+                        autoComplete="off"
                         ></input>
                     </div>
                 </div>
                 <div className="imagediv">
-                    <label>-Image URL-</label>
+                    <h3>Image URL</h3>
                     <input
                     className="imagein"
                     type="text"
                     name="image"
                     value={game.image}
+                    autoComplete="off"
                     ></input>
                 </div>
             </div>
                 <div className="checkboxs">
                     <div className="checks">
-                        <label>-Genres-</label>
+                        <label>Genres</label>
                         <div className="gendivs">
                             <div>
                                 {genres1.map((gen) => (
@@ -179,7 +184,7 @@ return (
                         </div>
                     </div>
                     <div className="checks">
-                        <label>-Platforms-</label>
+                        <label>Platforms</label>
                         <div >
                             {randomPlatforms.map((P) => (
                             <div key={P}>
@@ -198,6 +203,12 @@ return (
                 <button className="btn-createGame" type="submit">
                     Create!
                 </button>
+
+                <Link to="/home">
+                    <button className="btn-bth">
+                        Back to Home
+                    </button>
+                </Link>
             </div>
         </form>
     </div>

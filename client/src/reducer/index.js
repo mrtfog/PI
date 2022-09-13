@@ -44,6 +44,7 @@ export default function rootReducer(state = initialState, action) {
                 ...state,
                 videogames: [],
                 filteredVideogames: [],
+                searchVideogameById: [],
                 orderBy: "Select",
                 filterBy: "All",
             }

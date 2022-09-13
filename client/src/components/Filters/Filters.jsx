@@ -15,7 +15,7 @@ export function Filters({pagination}) {
   // Filtrado por genre
   const handleFilter = (e) => {
     dispatch(filterByGenre(e.target.value))
-    pagination(e, 1);
+    pagination(1);
   };
 
 
@@ -34,10 +34,10 @@ export function Filters({pagination}) {
   const handleCreator = (e) => {
     if (e.target.value === "Api" || e.target.value === "Created") {
       dispatch(orderByCreator(e.target.value));
-      pagination(e, 1);
+      pagination(1);
     } else {
       dispatch(filterByGenre(e.target.value));
-      pagination(e, 1);
+      pagination(1);
     }
     
   };
@@ -53,6 +53,7 @@ export function Filters({pagination}) {
               <option value={G.name}>{G.name}</option>
             ))}
           </select>
+          <i></i>
         </div>
 
 

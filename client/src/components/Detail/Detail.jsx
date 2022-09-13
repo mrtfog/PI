@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getVideogameById } from "../../actions/index";
+import { getVideogameById, resetAll } from "../../actions/index";
 import "./Detail.css";
 
 function Detail({ id }) {
@@ -9,6 +9,7 @@ function Detail({ id }) {
   const videogame = useSelector((store) => store.searchVideogameById);
 
   useEffect(() => {
+    dispatch(resetAll())
     dispatch(getVideogameById(id));
   }, []); 
   

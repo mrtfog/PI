@@ -15,8 +15,8 @@ const Home = () => {
   const videogames = useSelector((state) => state.videogames);
 
   useEffect (() => {
-    dispatch(resetAll())
     dispatch(getVideogames())
+    dispatch(resetAll())
   }, [])
 
   // Filtrado y Ordenado
@@ -27,8 +27,7 @@ const Home = () => {
 
 
   // Paginacion
-   function pagination(e, num) {
-    e.preventDefault();
+   function pagination(num) {
     setPage(num);
   }
 

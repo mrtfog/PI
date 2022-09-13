@@ -1,6 +1,8 @@
 .pagination{
+    height: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-end;
     justify-content: center;
     padding: 40px;
 }
@@ -18,11 +20,30 @@
     background-color: transparent;
     color: #fff;
     font-size: 20px;
-    font-weight: 500;
     transition: .25s ease-in-out;
 }
 
 .item:hover button{
+    border-color: transparent;
+    background-color: #FF5770;
+}
+
+.item-PrevNext{
+    padding: 0.7em;
+}
+
+.item-PrevNext button{
+    cursor: pointer;
+    height: 45px;
+    width: 35px;
+    border-radius: 5px;
+    border-color: #FF5770;
+    background-color: transparent;
+    color: #fff;
+    transition: .25s ease-in-out;
+}
+
+.item-PrevNext:hover button{
     border-color: transparent;
     background-color: #FF5770;
 }

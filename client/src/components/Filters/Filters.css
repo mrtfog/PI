@@ -6,7 +6,50 @@
     text-align: center;
 }
 
+.filters input,
+.filters select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.filters select::-ms-expand {
+    display: none;
+}
+
 .filters{
     display: flex;
     justify-content: space-around;
 }
+
+.filters h3{
+    padding-bottom: .5rem;
+}
+ 
+.filters select{
+    text-align: center;
+	display: inline-block;
+	width: 100%;
+	cursor: pointer;
+  	padding: 7px 10px;
+  	height: 30px;
+  	outline: 0; 
+	background: #f0f0f0;
+	color: #000000;
+	font-size: 13px;
+	border: 2px solid;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.25s ease-in-out;
+}
+ 
+.filters select:hover{
+	background: #FF5770;
+    color: #fff;
+}
+ 
+.filters select:focus{
+	background: #FF5770;
+    color: #fff;
+}
+ 

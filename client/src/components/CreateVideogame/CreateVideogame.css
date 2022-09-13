@@ -1,4 +1,71 @@
-.btn-createGame{
+/* 
+.form{
+  width: 100%;
+  padding: 5px;
+}
+
+.divTitles{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info{
+  width: 850px;
+  height: 30px;
+  border-style: none;
+  border-radius: 5px;
+  margin: 5px;
+  color: #000000;
+  text-align: center;
+}
+
+.info-description{
+  width: 850px;
+  height: 60px;
+  border-style: none;
+  border-radius: 5px;
+  margin: 5px;
+  text-align: center;
+}
+
+.imagediv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.imagein{
+  width: 850px;
+  height: 30px;
+  border-style: none;
+  border-radius: 5px;
+  margin: 5px;
+  text-align: center;
+}
+
+
+.checkboxs{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 650px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.gendivs{
+  display: flex;
+}
+
+.checks input:hover {
+  cursor: pointer;
+}
+
+.btn-createGame, .btn-bth{
     cursor: pointer;
     color: white;
     display: inline-block;
@@ -16,7 +83,7 @@
     transition: .25s ease-in-out;
   }
   
-  .btn-createGame:hover{
+  .btn-createGame:hover, .btn-bth:hover{
     color: #FFF;
     background-color: #FF5770;
     border-color: transparent;
@@ -24,4 +91,51 @@
     font-size: 14px;
     height: 50px;
   }
+   */
+
+
+   .info-createGame{
+    width: 850px;
+    height: 30px;
+    border-style: none;
+    border-radius: 5px;
+    margin: 5px;
+    color: #000000;
+    text-align: center;
+  } 
+
+  .info-description{
+    width: 850px;
+    height: 60px;
+    border-style: none;
+    border-radius: 5px;
+    margin: 5px;
+    text-align: center;
+  }
+
+  .btn-createGame, .btn-bth{
+    cursor: pointer;
+    color: white;
+    display: inline-block;
+    justify-content: center;
+    padding: 10px;
+    margin: 4px 2px;
+    background-color: transparent;
+    border-color: #FF5770;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 50px;
+    font-weight: 500;
+    transition: .25s ease-in-out;
+  }
   
+  .btn-createGame:hover, .btn-bth:hover{
+    color: #FFF;
+    background-color: #FF5770;
+    border-color: transparent;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 50px;
+  }

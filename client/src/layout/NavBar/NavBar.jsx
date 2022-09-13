@@ -22,9 +22,9 @@ const NavBar = () => {
 
         <div className="search-container">
           <form method="get" onSubmit={(e) => handleSubmit(e)}>
-            <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Search a videogame" className="search1 expandright1" id="searchright" name="q" type="text" autoComplete="off"/>
-              <Link to={`/results/${name}`}>
-                <label className="button1 searchbutton1" htmlFor="searchright"><span className="mglass">&#9906;</span></label>
+            <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Search a videogame" className="search1 expandright1" id="searchright" name="q" type="text" autoComplete="off" />
+              <Link to={name !== '' ? `/results/${name}` : `/home` }> 
+                <label className="button1 searchbutton1" htmlFor="searchright"><span className="mglass">&#9906;</span></label> 
               </Link>
           </form>
         </div>
