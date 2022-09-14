@@ -64,6 +64,7 @@ router.get('/', async function(req, res) {
           let apiRAWG = `https://api.rawg.io/api/games?key=${API_KEY}`
           for (let index = 0; index < 5; index++) {
             let games = (await axios.get(apiRAWG)).data
+            console.log(games)
             let dataGame = games.results.map((G) => {
               var game = {
                 name: G.name,

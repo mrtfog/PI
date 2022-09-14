@@ -36,6 +36,17 @@ figure img {
     scale: 1.05;
     width: 300px;
     height: 200px;
+    background: linear-gradient(to left,
+    #FF5770,
+    #E4428D,
+    #C42DA8,
+    #9E16C3,
+    #9E16C3,
+    #9E16C3,
+    #C42DA8,
+    #E4428D,
+    #FF5770);
+    background-color: #fff;
     transition: opacity 0.25s, scale 0.35s;
 }
 

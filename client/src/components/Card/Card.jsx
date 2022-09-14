@@ -6,7 +6,7 @@ function Card({data}) {
 	return (
 		<>
             <figure>
-                    <img className={`${s.img}`} src={data.image} alt={data.name} />
+                    <img className={`${s.img}`} src={data.image}/>
                 <figcaption>
                         <h2>{data.name}</h2>
                         <p>{data.genres}</p>

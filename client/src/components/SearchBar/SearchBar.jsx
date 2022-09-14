@@ -16,8 +16,6 @@ export default function SearchBar() {
   useEffect(() => {
     dispatch(searchVideogames(name));
   }, [name]); 
-  
-  console.log(name)
 
   // Paginacion
   function pagination(num) {
@@ -33,7 +31,7 @@ export default function SearchBar() {
 
   return (
     <div className="search">
-        { name.trim(" ") === "" ? <h1>You should type a name</h1> : <h1>Search results with the name '{name}'</h1>}
+        { name.trim(" ") === "" ? <h3>You should type a name</h3> : <h3>Search results with the name '{name}'</h3>}
         
         { Videogames.length > 0 ?
         <>

@@ -1,3 +1,14 @@
-.search h1{
-    color: #fff;
+.search h3{
+    position: relative;
+    margin-top: 30px;
+    color: #FF5770;
+}
+
+.search{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items:center;
+    align-content: center;
+    height: 94vh;
 }

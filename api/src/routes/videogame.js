@@ -11,6 +11,7 @@ router.get('/:id', async function (req, res) {
 
     try { 
         if (id.includes("-")) {
+            console.log(id)
             const gameDB = await Videogame.findOne({ where: {id},
                 include: {model: Genre, attributes: ['name'],
                 through: {attributes: []}}})
