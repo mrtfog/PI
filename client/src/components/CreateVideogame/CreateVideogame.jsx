@@ -46,46 +46,48 @@ const CreateVideogame = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const obj = {
-        name: game.name,
-        description: game.description,
-        image: game.image,
-        released: game.released,
-        rating: game.rating,
-        genres: game.genres,
-        platforms: game.platforms,
-        };
-
-        // Validaciones
-        if (!obj.name) {
-            alert("You should type a name.")
-            return
+        try{
+            const obj = {
+            name: game.name,
+            description: game.description,
+            image: game.image,
+            released: game.released,
+            rating: game.rating,
+            genres: game.genres,
+            platforms: game.platforms,
+            };
+    
+            // Validaciones
+            if (!obj.name) {
+                alert("You should type a name.")
+                return
+            }
+            if (!obj.description) {
+                alert("You should type a description.")
+                return
+            }if (!obj.released) {
+                alert("You should type a date.")
+                return
+            }if (obj.rating > 5 || obj.rating < 0) {
+                alert("You should select a rating between 0 and 5.")
+                return
+            }
+            dispatch(createVideogame(obj));
+            e.target.reset();
+            alert("Videogame created successfully!");
+    
+            setGame({
+                name: "",
+                description: "",
+                image: "",
+                released: "",
+                rating: 0,
+                genres: [],
+                platforms: [],
+            });
+        } catch (err){
+            alert("Error al crear el videojuego", err)
         }
-        if (!obj.description) {
-            alert("You should type a description.")
-            return
-        }if (!obj.released) {
-            alert("You should type a date.")
-            return
-        }if (obj.rating > 5 || obj.rating < 0) {
-            alert("You should selecta rating between 0 and 5.")
-            return
-        }
-
-
-        dispatch(createVideogame(obj));
-        e.target.reset();
-        alert("Videogame created successfully!");
-
-        setGame({
-            name: "",
-            description: "",
-            image: "",
-            released: "",
-            rating: 0,
-            genres: [],
-            platforms: [],
-        });
     };
 
 return (
