@@ -4,7 +4,7 @@
     flex-direction: row;
     align-items: flex-end;
     justify-content: center;
-    padding: 40px;
+    padding: 20px;
 }
 
 .item{
@@ -19,7 +19,7 @@
     border-color: #FF5770;
     background-color: transparent;
     color: #fff;
-    font-size: 20px;
+    font-size: 15px;
     transition: .25s ease-in-out;
 }
 

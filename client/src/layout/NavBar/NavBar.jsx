@@ -13,13 +13,13 @@ const NavBar = () => {
 
   return (
     <div className='navbarGlow'>
-      <div className='navbar'>
         <div className='title'>
           <Link to={`/home`}>
             <h1>Henry Videogames</h1>
           </Link>
         </div>
-
+        
+      <div className='navbar'>
         <div className="search-container">
           <form method="get" onSubmit={(e) => handleSubmit(e)}>
             <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Search a videogame" className="search1 expandright1" id="searchright" name="q" type="text" autoComplete="off" />

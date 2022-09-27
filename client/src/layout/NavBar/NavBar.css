@@ -1,11 +1,16 @@
 .navbar {
     width: 100%;
     height: 90px;
-    background-color: #000000;
+    background-color: #1E1E1E;
     color: #fff;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
+    padding-right: 1%;
+}
+
+.title{
+  position: relative;
 }
 
 .title a{
@@ -13,9 +18,16 @@
 }
 
 .title h1{
+  position: absolute;
+  transform: translate(10%, 50%);
   color: #fff;
   font-size: 30px;
-  transition: .5s ;
+  transition: scale .25s;
+}
+
+.title:hover h1{
+  scale: 1.02;
+  text-shadow: 0px 0px 5px #FF5770;
 }
 
 /* GLOWING EFFECT START*/
@@ -126,7 +138,7 @@ animation: animateGlow 2s ease-in-out infinite;
   .search-container {
     position: relative;
     display: inline-block;
-    margin: 4px 2px;
+    margin: 4px 7px;
     height: 50px;
     width: 50px;
     vertical-align: bottom;
